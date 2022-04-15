@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# MASTERMIND #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Pseudocode ##
 
-## Available Scripts
+### Define Required Constants (Game Board) ###
+1. Challenge Code: 1 row of 4 blank spaces (hidden)
+2. Solution Attempts: 10 rows of 4 blank spaces
+3. Attempt Responses: 10x 4 blank spaces next to Solution Attempts
 
-In the project directory, you can run:
+### Define Variables to Track State / Cache Elements ### 
+1. Challenge Code
+2. Number of Rows played (current active row out of 10)
+3. Solution Attempts in each Row
+4. Attempt Responses to each Solution Attempt
+5. Win or Lose condition
 
-### `npm start`
+### Begin Play ###
+1. Randomly generate 4-number sequence for Challenge Code (drawn from API).
+2. Guess 4 numbers in sequence. They will be placed in the first row of Solution Attempts.
+3. Compare numbers in Solution Attempt to Challenge Code
+4. If number is right guess AND right place, add “Yes” response to random point in Attempt Response row
+5. If number is right guess AND NOT right place, add “Partial” response to random point in Attempt Response row
+6. If number is NOT right guess, add nothing.
+7. Return to Step 2, continuing through Rows 2 to Row 10.
+8. If all numbers guessed are a match for number AND position, declare win, fill all Attempt Responses with Yes, and show Challenge Code to player.
+9. If player reaches Row 10 without solving, declare Lose.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### ICEBOX ###
+* Multiple players beyond Computer and Player
+* Challenge, Solution, and Responses of 5 or more
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Setup ##
+1.

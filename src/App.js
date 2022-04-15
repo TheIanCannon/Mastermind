@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App(){
+
+const [code, setCode] = useState([]);
+
+  useEffect(() => {
+    const getCode = async () => {
+      const codeAPI = await fetch(`https://www.random.org/integers/?num=4&min=0&max=7&col=1&base=10&format=plain&rnd=new`);
+      let codeText = await codeAPI.text();
+      let codeArray = codeText.split("\n", 4);
+      setCode(codeArray);
+				};
+    getCode(); 
+  },[]);
+
+console.log('the code is ', typeof code, code);
+
 }
-
-export default App;
