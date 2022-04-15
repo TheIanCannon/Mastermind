@@ -1,14 +1,17 @@
 .Rows, .Dot{
   display: flex;
-  flex-direction: ;
   justify-content: center;
 }
 
 .Dot {
+  display: flex;
+  justify-content: center;
   align-items: center;
   height: 30px;
-  width: 30px;
-  margin: 0.0625%;
+  width: 32.5px;
+  margin:1%;
+  position: relative;
+  left: 0.75%;
   border: 1px solid black;
   border-radius: 50%;
 }

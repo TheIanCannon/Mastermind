@@ -1,6 +1,17 @@
-.HintRows, .Pip{
+.Hints{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0.25%;
+  margin-top: 0.25%
+}
+
+.HintRow{
+  width: 30px;
+  height: 30px;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 50% 50%;
 }
 
 .Pip {

@@ -1,9 +1,8 @@
 .App {
-  display: grid;
-  justify-content: center;
 }
 
 .GuessesAndHints{
-  display: grid;
-  grid-column: [.Guesses] [.Hints];
+  display: flex;
+  justify-content: center;
+  margin-left: 1.75%;
 }

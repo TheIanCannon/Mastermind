@@ -3,7 +3,6 @@ import './Hints.css';
 export default function Hints(){
 		
   let hintBoard = [
-				["0","","",""],
 				["","","",""],
 				["","","",""],
 				["","","",""],
@@ -12,13 +11,14 @@ export default function Hints(){
 				["","","",""],
 				["","","",""],
 				["","","",""],
-				["","","","39"],
+				["","","",""],
+				["","","",""],
 		];
 
   let revHint = hintBoard.reverse();
 
   return(
-    <div className="Solutions">
+    <div className="Hints">
       {revHint.map((pipRow, pr) => {
         return(
           <div className="HintRow" key={pr}>
