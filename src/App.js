@@ -1,8 +1,13 @@
 import Code from './components/Code.jsx';
+import HeaderRules from './components/HeaderRules.jsx';
 
 export default function App(){
 
   return(
-    <div className="App"><Code/></div>
+    
+    <div className="App">
+      <HeaderRules/>
+      <Code/>
+    </div>
 	 );
 }
