@@ -1,17 +1,14 @@
-.Code{
+.Rows, .Dot{
   display: flex;
+  flex-direction: ;
   justify-content: center;
 }
 
-.CodePegs{
-  display: flex;
-  justify-content: center;
+.Dot {
   align-items: center;
   height: 30px;
   width: 30px;
   margin: 0.0625%;
-  background: grey;
-  color: grey;
   border: 1px solid black;
   border-radius: 50%;
 }

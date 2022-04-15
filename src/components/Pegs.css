@@ -1,0 +1,47 @@
+.Pegs{
+  display: flex;
+  justify-content: center;
+}
+
+.A-Peg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  margin: 0.0625%;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+#Red{
+  background: red;
+}
+
+#Orange{
+  background: orange;
+}
+
+#Yellow {
+  background: yellow;
+}
+
+#Green {
+  background: green;
+}
+
+#Cyan {
+  background: cyan;
+}
+
+#Blue {
+  background: blue;
+}
+
+#Violet {
+  background: purple;
+}
+
+#Magenta {
+  background: magenta;
+}

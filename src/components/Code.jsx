@@ -21,7 +21,7 @@ const [codePegs, setCodePegs] = useState([]);
     <div className="Code">
       {codePegs.map((peg) => {
         return(
-          <div className="Peg">{peg}</div>
+          <div className="CodePegs">{peg}</div>
         )
       })}
     </div>
