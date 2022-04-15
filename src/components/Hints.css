@@ -1,0 +1,13 @@
+.HintRows, .Pip{
+  display: flex;
+  justify-content: center;
+}
+
+.Pip {
+  align-items: center;
+  height: 6px;
+  width: 6px;
+  margin: 0.0625%;
+  border: 1px solid black;
+  border-radius: 50%;
+}

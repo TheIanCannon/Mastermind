@@ -1,6 +1,6 @@
-import './Solutions.css';
+import './Guesses.css';
 
-export default function Solutions(){
+export default function Guesses(){
 
 		let solutionBoard = [
 				["0","","",""],
@@ -15,11 +15,11 @@ export default function Solutions(){
 				["","","","39"],
 		];
 
-  let revBoard = solutionBoard.reverse();
+  let revSolution = solutionBoard.reverse();
 
   return(
-    <div className="Solutions">
-      {revBoard.map((row, r) => {
+    <div className="Guesses">
+      {revSolution.map((row, r) => {
         return(
           <div className="Rows" key={r}>
             {[...row].map((dot, d) => {
