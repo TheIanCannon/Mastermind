@@ -11,11 +11,9 @@ export default function Guesses(props){
     console.log('clicked clear');
   }
  
-  
-
   return(
     <div className="Guesses">
-      {props.guessBoard.reverse().map((row, r) => {
+      {props.revBoard.map((row, r) => {
         return(
           <div className="Rows" key={r}>
             <button className="Confirm" onClick={handleConfirm}>✔</button>

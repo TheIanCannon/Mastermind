@@ -6,6 +6,8 @@ import Pegs from './components/Pegs.jsx';
 
 import './App.css';
 
+export default function App(){
+
 		let guessBoard = [
 				["0","1","2","3"],
 				["4","5","6","7"],
@@ -19,8 +21,7 @@ import './App.css';
 				["36","37","38","39"],
   ];
 
-
-export default function App(){
+  let revBoard = guessBoard.reverse();
 
   return(    
     <div className="App">
@@ -28,7 +29,7 @@ export default function App(){
 								<TitleTag/>
 								<Code/>
 								<div className="GuessesAndHints">
-										<Guesses guessBoard={guessBoard}/>              
+										<Guesses revBoard={revBoard}/>              
 										<Hints/>        
 								</div>
 								  <Pegs guessBoard={guessBoard}/>						
