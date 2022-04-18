@@ -8,8 +8,9 @@ export default function Pegs(props){
 
 		function handleClick(evt){
     console.log('button is', evt.target.innerText);
-    props.guessBoard[currentRow][currentPeg]=evt.target.innerText;
+    props.setGuessBoard[currentRow][currentPeg]=evt.target.innerText;
     console.log('choice is logged as ', props.guessBoard[currentRow][currentPeg]);
+    console.log(props.guessBoard[currentRow]);
    if(currentPeg<3){currentPeg++};   
 		}
 
