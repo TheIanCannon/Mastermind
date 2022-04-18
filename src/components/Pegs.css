@@ -1,4 +1,4 @@
-.Pegs{
+.Row1, .Row2{
   display: flex;
   justify-content: center;
 }
@@ -9,7 +9,7 @@
   align-items: center;
   height: 30px;
   width: 30px;
-  margin: 0.0625%;
+  margin: 0.09375%;
   border: 1px solid black;
   border-radius: 50%;
 }

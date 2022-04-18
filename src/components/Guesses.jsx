@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import './Guesses.css';
 
 export default function Guesses(){
+
+const [currentRow, setCurrentRow] = useState(0);
+const [currentPeg, setCurrentPeg] = useState(0);
 
 		let solutionBoard = [
 				["0","","",""],

@@ -1,12 +1,26 @@
-0 Red 
-1 Orange
-2 Yellow
-3 Green
-4 Cyan
-5 Blue
-6 Violet
-7 Magenta
+0 Red 1 Orange 2 Yellow 3 Green 4 Cyan 5 Blue 6 Violet 7 Magenta 
+No White || Partial Grey || Full Black
 
-No White
-Partial Grey / X
-Full Black
+Click a peg-color choice. (RED)
+
+currentPeg is "0". Peg-color-choice (RED) is pushed to currentRow ("0")
+and currentPeg "0". (from "" to "RED"). 
+
+currentPeg goes to "1" (then 2, 3). 
+IF currentPeg is 3, RETURN, since subarray is FULL. NO MORE PEGS TO ADD.
+
+IF currentRow.length = 3 (4?), 
+YES to submit,
+NO to erase and re-start row.
+
+IF YES to submit,
+IF CurrentRow === Code, YOU WIN
+ELSE IF CurrentRow !== CODE run HINTCHECK():
+  
+  Guess[CurrentRow].forEach
+  If currentRow.includes (Code) && index matches,
+  Add YES
+  Else If currentRow.includes (code) && !index match,
+  Add PARTIAL
+  Else
+  Add NO
