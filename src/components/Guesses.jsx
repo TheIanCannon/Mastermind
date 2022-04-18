@@ -10,6 +10,8 @@ export default function Guesses(props){
   function handleClear(){
     console.log('clicked clear');
   }
+ 
+  
 
   return(
     <div className="Guesses">

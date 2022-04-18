@@ -12,9 +12,10 @@
   margin: 0.09375%;
   border: 1px solid black;
   border-radius: 50%;
+  color: transparent;
 }
 
-#Red{
+#Red {
   background: red;
 }
 
