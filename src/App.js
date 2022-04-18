@@ -6,6 +6,19 @@ import Pegs from './components/Pegs.jsx';
 
 import './App.css';
 
+		let guessBoard = [
+				["0","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","","39"],
+		];
+
 export default function App(){
 
   return(    
@@ -14,11 +27,11 @@ export default function App(){
 								<TitleTag/>
 								<Code/>
 								<div className="GuessesAndHints">
-										<Guesses/>              
+										<Guesses guessBoard={guessBoard}/>              
 										<Hints/>        
 								</div>
-								<Pegs/>
-						</div>
+								  <Pegs guessBoard={guessBoard}/>						
+        </div>
     </div>
 	 );
 }

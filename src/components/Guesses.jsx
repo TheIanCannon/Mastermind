@@ -1,39 +1,32 @@
-import { useState } from 'react';
 import './Guesses.css';
+import guessBoard from '../App.js';
 
-export default function Guesses(){
+export default function Guesses(props){
 
-const [currentRow, setCurrentRow] = useState(0);
-const [currentPeg, setCurrentPeg] = useState(0);
+  function handleConfirm(){
+    console.log('clicked confirm');
+  }
 
-		let solutionBoard = [
-				["0","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","","39"],
-		];
-
-  let revSolution = solutionBoard.reverse();
+  function handleClear(){
+    console.log('clicked clear');
+  }
 
   return(
     <div className="Guesses">
-      {revSolution.map((row, r) => {
+      {props.guessBoard.reverse().map((row, r) => {
         return(
           <div className="Rows" key={r}>
+            <button className="Confirm" onClick={handleConfirm}>✔</button>
+            <button className="Clear" onClick={handleClear}>✘</button>
             {[...row].map((dot, d) => {
               return (
-                <div className="Dot">{dot}</div>
+                <div className="Dot" key={d}>{dot}</div>
               )}
             )}
           </div>
         )
       })}
     </div>
+    
   );
 }

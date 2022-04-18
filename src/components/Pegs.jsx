@@ -1,13 +1,14 @@
 import { useState } from 'react';
+import guessBoard from './Guesses.jsx';
 import './Pegs.css';
 
-export default function Pegs(){
+export default function Pegs(props){
 
 		const [currentRow, setCurrentRow] = useState(0);
 		const [currentPeg, setCurrentPeg] = useState(0);
 
 		function handleClick(evt){
-				console.log("Clicked", evt.target.id);
+    console.log(evt.target.id, props.guessBoard);
 		}
 
   return(

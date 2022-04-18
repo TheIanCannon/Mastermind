@@ -15,16 +15,14 @@ export default function Hints(){
 				["","","",""],
 		];
 
-  let revHint = hintBoard.reverse();
-
   return(
     <div className="Hints">
-      {revHint.map((pipRow, pr) => {
+      {hintBoard.reverse().map((pipRow, pr) => {
         return(
           <div className="HintRow" key={pr}>
             {[...pipRow].map((pip, p) => {
               return (
-                <div className="Pip">{pip}</div>
+                <div className="Pip" key={p}>{pip}</div>
               )}
             )}
           </div>

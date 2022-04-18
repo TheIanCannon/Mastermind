@@ -3,7 +3,7 @@ import './Code.css';
 
 export default function Code(){
 
-const [codePegs, setCodePegs] = useState([]);
+const [codePegs, setCodePegs] = useState(["","","",""]);
 
   useEffect(() => {
     const getCode = async () => {
@@ -19,9 +19,9 @@ const [codePegs, setCodePegs] = useState([]);
 
   return(
     <div className="Code">
-      {codePegs.map((peg) => {
+      {codePegs.map((peg, k) => {
         return(
-          <div className="CodePegs">{peg}</div>
+          <div className="CodePegs" key={k}>{peg}</div>
         )
       })}
     </div>
