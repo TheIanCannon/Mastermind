@@ -9,9 +9,9 @@
   align-items: center;
   height: 30px;
   width: 32.5px;
-  margin:1%;
+  margin:0.5%;
   position: relative;
-  left: 0.75%;
+  left: 0.5%;
   border: 1px solid black;
   border-radius: 50%;
 }

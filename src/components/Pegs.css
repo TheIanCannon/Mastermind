@@ -1,6 +1,7 @@
 .Row1, .Row2{
   display: flex;
   justify-content: center;
+  margin-left: 0.125%;
 }
 
 .A-Peg {
@@ -9,7 +10,8 @@
   align-items: center;
   height: 30px;
   width: 30px;
-  margin: 0.09375%;
+  margin: 0.125%;
+  margin-top: 0.25%;
   border: 1px solid black;
   border-radius: 50%;
   color: transparent;
