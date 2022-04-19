@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import TitleTag from './components/TitleTag.jsx';
 import Code from './components/Code.jsx';
 import Guesses from './components/Guesses.jsx';
@@ -7,6 +9,10 @@ import Pegs from './components/Pegs.jsx';
 import './App.css';
 
 export default function App(){
+
+		let [currentRow, setCurrentRow] = useState(0);
+		let [currentPeg, setCurrentPeg] = useState(0);
+
 
 		let guessBoard = [
 				["0","1","2","3"],
@@ -29,10 +35,10 @@ export default function App(){
 								<TitleTag/>
 								<Code/>
 								<div className="GuessesAndHints">
-										<Guesses revBoard={revBoard}/>              
+										<Guesses revBoard={revBoard} currentRow={currentRow} setCurrentRow={setCurrentRow}/>              
 										<Hints/>        
 								</div>
-								  <Pegs guessBoard={guessBoard}/>						
+								  <Pegs guessBoard={guessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow}/>						
         </div>
     </div>
 	 );

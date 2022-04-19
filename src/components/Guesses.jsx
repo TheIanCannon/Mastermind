@@ -4,11 +4,11 @@ import guessBoard from '../App.js';
 export default function Guesses(props){
 
   function handleConfirm(){
-    console.log('clicked confirm');
+    if (props.currentRow===props.code) {console.log("YOU WIN")}
   }
 
   function handleClear(){
-    console.log('clicked clear');
+    props.setCurrentRow(["","","",""]);
   }
  
   return(
