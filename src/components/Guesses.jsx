@@ -1,19 +1,22 @@
 import './Guesses.css';
-import guessBoard from '../App.js';
 
-export default function Guesses(props){
+export default function Guesses({guessBoard, currentPeg, currentRow, codePegs}){
 
   function handleConfirm(){
-    if (props.currentRow===props.code) {console.log("YOU WIN")}
+    if (currentRow===codePegs) {console.log("YOU WIN")}
   }
 
   function handleClear(){
-    props.setCurrentRow(["","","",""]);
+    guessBoard[currentRow]=["","","",""];
+    console.log(guessBoard[currentRow]);
+    guessBoard[currentRow][currentPeg]=0;
   }
  
+  const revBoard= guessBoard.slice(0).reverse();
+
   return(
     <div className="Guesses">
-      {props.revBoard.map((row, r) => {
+      {revBoard.map((row, r) => {
         return(
           <div className="Rows" key={r}>
             <button className="Confirm" onClick={handleConfirm}>✔</button>
