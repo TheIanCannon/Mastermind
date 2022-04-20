@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import TitleTag from './components/TitleTag.jsx';
 import Code from './components/Code.jsx';
 import Guesses from './components/Guesses.jsx';
-
 import Hints from './components/Hints.jsx';
 import Pegs from './components/Pegs.jsx';
 
@@ -11,7 +10,7 @@ import './App.css';
 
 export default function App(){
 
-  let [codePegs, setCodePegs] = useState(["","","",""]);
+  let [codePegs, setCodePegs] = useState([null,null,null,null]);
 		let [currentRow, setCurrentRow] = useState(0);
 		let [currentPeg, setCurrentPeg] = useState(0);
   let [currentHint, setCurrentHint] = useState(0);
@@ -25,7 +24,7 @@ export default function App(){
 				[null,null,null,null],
 				[null,null,null,null],
 				[null,null,null,null],
-				[null,null,null,"!"],
+				[null,null,null,null],
   ]);
   let [hintBoard, setHintBoard] = useState([
 				[null,null,null,null],

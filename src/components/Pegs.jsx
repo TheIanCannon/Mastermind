@@ -3,11 +3,13 @@ import './Pegs.css';
 export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, setCodePegs}){
 
   function handleClick(evt){
-    guessBoard[currentRow][currentPeg]=evt.target.innerText;
-    // SET COLOR OF currentPeg based on evt.target.id of color peg chosen?
-    console.log('button is', evt.target.id, 'choice is', guessBoard[currentRow][currentPeg]);
-    if(currentPeg<3){currentPeg+=1};
+    if(currentPeg<=3){
+						guessBoard[currentRow][currentPeg]=evt.target.innerText;
+						console.log('button is', evt.target.id, 'choice is', guessBoard[currentRow][currentPeg]);
+						setCurrentPeg(currentPeg+1)
+    };
     console.log(guessBoard[currentRow]);
+    setGuessBoard(guessBoard);
  		}
 
   function handleSubmit(){
@@ -21,8 +23,8 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
         alert("YOU WIN!");
 						} else if (currentRow<9) {
 						  checkGuesses();
-								currentRow++; 
-								currentPeg=0;
+								setCurrentRow(currentRow+1); 
+								setCurrentPeg(0);
 								console.log(currentRow);
 								console.log(guessBoard[currentRow]);
 						} else if (currentRow===9) {
@@ -37,7 +39,8 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 
   function handleClear(){
     guessBoard[currentRow]=[null,null,null,null];
-    currentPeg=0;
+    setGuessBoard(guessBoard);
+    setCurrentPeg(0);
   }
 
   return(
