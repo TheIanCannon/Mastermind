@@ -26,6 +26,18 @@ export default function App(){
 				["","","",""],
 				["","","","TR"],
   ]);
+  let [hintBoard, setHintBoard] = useState([
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+				["","","",""],
+		]);
 
   useEffect(() => {
     const getCode = async () => {
@@ -47,7 +59,7 @@ export default function App(){
 								<Code codePegs={codePegs}/>
 								<div className="GuessesAndHints">
 										<Guesses guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs}/>              
-										<Hints/>        
+										<Hints hintBoard={hintBoard}/>        
 								</div>
 								  <Pegs guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs}/>						
         </div>

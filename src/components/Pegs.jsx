@@ -10,14 +10,24 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
  		}
 
   function handleSubmit(){
-    if (guessBoard[currentRow][0]===codePegs[0] && guessBoard[currentRow][1]===codePegs[1] && guessBoard[currentRow][2]===codePegs[2] && guessBoard[currentRow][3]===codePegs[3]) {
-      alert("YOU WIN!");
-    } else if (currentRow<9) {
-      currentRow++; 
-      console.log(currentRow);
-    } else if (currentRow===9) {
-      alert("YOU LOSE");
+    if (guessBoard[currentRow].includes("")) {
+      alert("FILL THE BLANK SPACES FIRST")
+    } else {
+						checkWin();
+						if (guessBoard[currentRow][0]===codePegs[0] && guessBoard[currentRow][1]===codePegs[1] && guessBoard[currentRow][2]===codePegs[2] && guessBoard[currentRow][3]===codePegs[3]) {      alert("YOU WIN!");
+						} else if (currentRow<9) {
+								currentRow++; 
+								currentPeg=0;
+								console.log(currentRow);
+								console.log(guessBoard[currentRow]);
+						} else if (currentRow===9) {
+								alert("YOU LOSE");
+						}
 				}
+  }
+   
+  function checkWin(){
+    console.log("placeholder");
   }
 
   function handleClear(){

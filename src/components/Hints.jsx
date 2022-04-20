@@ -1,28 +1,15 @@
 import './Hints.css';
 
-export default function Hints(){
+export default function Hints({hintBoard}){
 		
-  let hintBoard = [
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-		];
-
   return(
     <div className="Hints">
-      {hintBoard.reverse().map((pipRow, pr) => {
+      {hintBoard.slice(0).reverse().map((hintRow, hr) => {
         return(
-          <div className="HintRow" key={pr}>
-            {[...pipRow].map((pip, p) => {
+          <div className="HintRow" key={hr}>
+            {[...hintRow].map((hint, h) => {
               return (
-                <div className="Pip" key={p}>{pip}</div>
+                <div className="Hint" key={h}>{hint}</div>
               )}
             )}
           </div>
