@@ -4,7 +4,7 @@
   font-weight: bolder;
 }
 
-.Tagline{
+.Tagline, .PlayerMessage{
   display: flex;
   justify-content: center;
   font-weight: lighter;

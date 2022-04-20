@@ -1,18 +1,18 @@
 import './Guesses.css';
 
-function Dot(props){
-  return(
-    <div className="Dot">{props.children}</div>
-  );
-}
-
 function Row(props){
   return(
     <div className="Rows">{props.children}</div>
   );
 }
 
-export default function Guesses({guessBoard, setGuessBoard}){
+function Dot(props){
+  return(
+    <div className="Dot" id={"color_"+props.children}>{props.children}</div>
+  );
+}
+
+export default function Guesses({guessBoard}){
 
   return(
     <div className="Guesses">

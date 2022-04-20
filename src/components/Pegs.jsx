@@ -1,10 +1,10 @@
 import './Pegs.css';
 
-export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, setCodePegs}){
+export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, hintBoard, setHintBoard}){
 
   function handleClick(evt){
     if(currentPeg<=3){
-						guessBoard[currentRow][currentPeg]=evt.target.innerText;
+						guessBoard[currentRow][currentPeg]=evt.target.innerHTML;
 						console.log('button is', evt.target.id, 'choice is', guessBoard[currentRow][currentPeg]);
 						setCurrentPeg(currentPeg+1)
     };
@@ -14,7 +14,7 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 
   function handleSubmit(){
     if (guessBoard[currentRow].includes(null)) {
-      alert("FILL THE BLANK SPACES FIRST")
+      return;
     } else {
 						if (guessBoard[currentRow][0]===codePegs[0] && 
           guessBoard[currentRow][1]===codePegs[1] && 
@@ -34,8 +34,21 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
   }
    
   function checkGuesses(){
-    console.log("placeholder; check the guess row, then push a blank for each MISS, an X for each PARTIAL, a Bullet point for each FULL match, to a random spot in the hintRow");
-  }
+    let hintArray = [];
+    for (let i=0; i<codePegs.length; i++){
+        if (guessBoard[currentRow][i]===codePegs[i]) {
+            hintArray.push("Y");
+        } else if (codePegs.includes(guessBoard[currentRow][i])){
+            hintArray.push("P");
+        } else {
+            hintArray.push("N");
+        }
+    }
+    console.log(hintArray);
+    hintBoard[currentRow]=hintArray;
+    setHintBoard(hintBoard);
+    console.log(hintBoard);
+}
 
   function handleClear(){
     guessBoard[currentRow]=[null,null,null,null];
@@ -46,18 +59,18 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
   return(
     <div className="Pegs">
       <div className="Row1">
-								<button className="A-Peg" id="Red" onClick={handleClick}>0</button>
-								<button className="A-Peg" id="Orange" onClick={handleClick}>1</button>
-								<button className="A-Peg" id="Yellow" onClick={handleClick}>2</button>
-								<button className="A-Peg" id="Green" onClick={handleClick}>3</button>          
-        <button className="Confirm" onClick={handleSubmit}>Submit ✔</button>            
+								<button className="A-Peg" id="color_0" onClick={handleClick}>0</button>
+								<button className="A-Peg" id="color_1" onClick={handleClick}>1</button>
+								<button className="A-Peg" id="color_2" onClick={handleClick}>2</button>
+								<button className="A-Peg" id="color_3" onClick={handleClick}>3</button>          
+        <button className="CheckOrX" onClick={handleSubmit}>✔</button>            
       </div>
       <div className="Row2">
-        <button className="A-Peg" id="Cyan" onClick={handleClick}>4</button>
-        <button className="A-Peg" id="Blue" onClick={handleClick}>5</button>
-        <button className="A-Peg" id="Violet" onClick={handleClick}>6</button>
-        <button className="A-Peg" id="Magenta" onClick={handleClick}>7</button>          
-        <button className="Clear" onClick={handleClear}>Clear! ✘</button>
+        <button className="A-Peg" id="color_4" onClick={handleClick}>4</button>
+        <button className="A-Peg" id="color_5" onClick={handleClick}>5</button>
+        <button className="A-Peg" id="color_6" onClick={handleClick}>6</button>
+        <button className="A-Peg" id="color_7" onClick={handleClick}>7</button>          
+        <button className="CheckOrX" onClick={handleClear}>✘</button>
       </div>     
   </div>
   );

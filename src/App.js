@@ -38,6 +38,7 @@ export default function App(){
 				[null,null,null,null],
 				[null,null,null,null],
 		]);
+  let [message, setMessage] = useState("Guess the hidden code...");
 
   useEffect(() => {
     const getCode = async () => {
@@ -55,13 +56,13 @@ export default function App(){
   return(    
     <div className="App">
 						<div className="Mastermind">
-								<TitleTag/>
+								<TitleTag message={message}/>
 								<Code codePegs={codePegs}/>
 								<div className="GuessesAndHints">
-										<Guesses guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs}/>              
+										<Guesses guessBoard={guessBoard}/>              
 										<Hints guessBoard={guessBoard} hintBoard={hintBoard} currentHint={currentHint} setCurrentHint={setCurrentHint}/>        
 								</div>
-								  <Pegs guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs}/>						
+								  <Pegs guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs} hintBoard={hintBoard} setHintBoard={setHintBoard}/>						
         </div>
     </div>
 	 );

@@ -1,7 +1,6 @@
 .Row1, .Row2{
   display: flex;
   justify-content: center;
-  margin-left: 0.125%;
 }
 
 .A-Peg {
@@ -12,39 +11,18 @@
   width: 30px;
   margin: 0.125%;
   margin-top: 0.25%;
-  border: 1px solid black;
   border-radius: 50%;
   color: transparent;
+  user-select: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none; 
 }
 
-#Red {
-  background: red;
-}
-
-#Orange{
-  background: orange;
-}
-
-#Yellow {
-  background: yellow;
-}
-
-#Green {
-  background: green;
-}
-
-#Cyan {
-  background: cyan;
-}
-
-#Blue {
-  background: blue;
-}
-
-#Violet {
-  background: purple;
-}
-
-#Magenta {
-  background: magenta;
+.CheckOrX{
+  height: 30px;
+  width: 30px;
+  margin-top: 0.25%;
+  border-radius: 50%;
 }
