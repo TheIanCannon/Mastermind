@@ -4,18 +4,23 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 
   function handleClick(evt){
     guessBoard[currentRow][currentPeg]=evt.target.innerText;
-    console.log('button is', evt.target.innerText, 'choice is', guessBoard[currentRow][currentPeg]);
+    // SET COLOR OF currentPeg based on evt.target.id of color peg chosen?
+    console.log('button is', evt.target.id, 'choice is', guessBoard[currentRow][currentPeg]);
     if(currentPeg<3){currentPeg+=1};
     console.log(guessBoard[currentRow]);
  		}
 
   function handleSubmit(){
-    if (guessBoard[currentRow].includes("")) {
+    if (guessBoard[currentRow].includes(null)) {
       alert("FILL THE BLANK SPACES FIRST")
     } else {
-						checkWin();
-						if (guessBoard[currentRow][0]===codePegs[0] && guessBoard[currentRow][1]===codePegs[1] && guessBoard[currentRow][2]===codePegs[2] && guessBoard[currentRow][3]===codePegs[3]) {      alert("YOU WIN!");
+						if (guessBoard[currentRow][0]===codePegs[0] && 
+          guessBoard[currentRow][1]===codePegs[1] && 
+          guessBoard[currentRow][2]===codePegs[2] && 
+          guessBoard[currentRow][3]===codePegs[3]) {      
+        alert("YOU WIN!");
 						} else if (currentRow<9) {
+						  checkGuesses();
 								currentRow++; 
 								currentPeg=0;
 								console.log(currentRow);
@@ -26,14 +31,13 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 				}
   }
    
-  function checkWin(){
-    console.log("placeholder");
+  function checkGuesses(){
+    console.log("placeholder; check the guess row, then push a blank for each MISS, an X for each PARTIAL, a Bullet point for each FULL match, to a random spot in the hintRow");
   }
 
   function handleClear(){
-    guessBoard[currentRow]=["","","",""];
-    console.log(guessBoard[currentRow]);
-    guessBoard[currentRow][setCurrentPeg]=0;
+    guessBoard[currentRow]=[null,null,null,null];
+    currentPeg=0;
   }
 
   return(
@@ -50,7 +54,7 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
         <button className="A-Peg" id="Blue" onClick={handleClick}>5</button>
         <button className="A-Peg" id="Violet" onClick={handleClick}>6</button>
         <button className="A-Peg" id="Magenta" onClick={handleClick}>7</button>          
-        <button className="Clear" onClick={handleClear}>Clear ✘</button>
+        <button className="Clear" onClick={handleClear}>Clear! ✘</button>
       </div>     
   </div>
   );

@@ -9,7 +9,7 @@ export default function Guesses({guessBoard, setGuessBoard}){
           <div className="Rows" key={r}>
             {[...row].map((dot, d) => {
               return (
-                <div className="Dot" key={d}>{dot}</div>
+                <div className="Dot" id={null} key={d}>{dot}</div>
               )}
             )}
           </div>

@@ -14,29 +14,30 @@ export default function App(){
   let [codePegs, setCodePegs] = useState(["","","",""]);
 		let [currentRow, setCurrentRow] = useState(0);
 		let [currentPeg, setCurrentPeg] = useState(0);
+  let [currentHint, setCurrentHint] = useState(0);
 		let [guessBoard, setGuessBoard] = useState([
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","","TR"],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,"!"],
   ]);
   let [hintBoard, setHintBoard] = useState([
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
-				["","","",""],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
+				[null,null,null,null],
 		]);
 
   useEffect(() => {
@@ -59,7 +60,7 @@ export default function App(){
 								<Code codePegs={codePegs}/>
 								<div className="GuessesAndHints">
 										<Guesses guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs}/>              
-										<Hints hintBoard={hintBoard}/>        
+										<Hints guessBoard={guessBoard} hintBoard={hintBoard} currentHint={currentHint} setCurrentHint={setCurrentHint}/>        
 								</div>
 								  <Pegs guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs}/>						
         </div>
