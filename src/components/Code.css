@@ -1,9 +1,9 @@
-.Code{
+.Code {
   display: flex;
   justify-content: center;
 }
 
-.CodePegs{
+.CodePegs {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,18 +13,18 @@
   border: 1px solid black;
   border-radius: 50%;
   user-select: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none; 
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-#Hidden{
+#Hidden {
   background: grey;
   color: grey;
   user-select: none;
-   -webkit-user-select: none;
-   -khtml-user-select: none;
-   -moz-user-select: none;
-   -ms-user-select: none; 
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }

@@ -1,10 +1,11 @@
-.Title{
+.Title {
   display: flex;
   justify-content: center;
   font-weight: bolder;
 }
 
-.Tagline, .PlayerMessage{
+.Tagline,
+.PlayerMessage {
   display: flex;
   justify-content: center;
   font-weight: lighter;

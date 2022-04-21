@@ -1,45 +1,42 @@
-.App {
-}
-
-.GuessesAndHints{
+.GuessesAndHints {
   display: flex;
   justify-content: center;
   margin-left: 1.75%;
 }
 
-.PegsAndReset{
+.PegsAndReset {
   margin-left: 1.5%;
 }
 
-#color_0{
-  color:red;
+#color_0 {
+  color: red;
   background: red;
 }
-#color_1{
+#color_1 {
   color: orange;
   background: orange;
 }
-#color_2{
+#color_2 {
   color: yellow;
   background: yellow;
 }
-#color_3{
+#color_3 {
   color: green;
   background: green;
 }
-#color_4{
+#color_4 {
   color: cyan;
   background: cyan;
 }
-#color_5{
+#color_5 {
   color: blue;
   background: blue;
 }
-#color_6{
+#color_6 {
   color: purple;
   background: purple;
 }
-#color_7{
+#color_7 {
   color: magenta;
   background: magenta;
 }
