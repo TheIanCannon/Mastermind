@@ -16,6 +16,6 @@ _API:_ Random.org API for code generation
 2. Click on any of the eight colored dots to select one and add it to the blank rows, starting with the lowest first.
 3. Click ```✗``` to reset the current row at any time.
 4. Click ```✓``` to submit the attempted solution. A solution is accepted only if all four spaces have been filled.
-5. Upon submission, light grey (wrong color), dark grey (right color, wrong location), and black (right color and location) pips randomly fill each of the four hint spots next to the current row.
+5. Upon submission, light grey (wrong color), dark grey (right color/wrong location), and black (right color/location) pips randomly fill each of the four hint spots next to the current row.
 6. The player wins if the solution is correct. Otherwise, the next blank row becomes active. The player loses the game if they are unable to solve in ten rounds.
 7. Click ```Reset``` to restart the game at any time.
