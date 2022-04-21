@@ -2,8 +2,8 @@
 Based on the original physical boardgame, this digital version challenges a player to solve a secret code of four colors within ten moves. 
 
 ## Technologies Used ##
-_Languages:_ CSS, HTML, Javascript
-_Libraries:_ ReactJS
+_Languages:_ CSS, HTML, Javascript\
+_Libraries:_ ReactJS\
 _API:_ Random.org API for code generation
 
 ## Setup ##
