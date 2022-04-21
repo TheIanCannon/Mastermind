@@ -28,9 +28,10 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 				  		setCurrentRow(currentRow+1); 
 						  setCurrentPeg(0);
 						} else {
-      		alert("YOU LOSE");
-				}
-     }
+      		message="You lose. Better luck next time!";
+        setMessage(message);
+				  }
+    }
   }
    
   function checkGuesses(){
