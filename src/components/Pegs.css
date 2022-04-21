@@ -2,7 +2,7 @@
 .Row2 {
   display: flex;
   justify-content: center;
-  margin-left: 0.5%;
+  margin-left: 0.8%;
 }
 
 .A-Peg {
@@ -14,7 +14,8 @@
   margin: 0.125%;
   margin-top: 0.25%;
   border-radius: 50%;
-  color: transparent;
+  border: 2px solid lightgrey;
+  border-style: outset;
   user-select: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -27,5 +28,5 @@
   width: 30px;
   margin-top: 0.25%;
   border-radius: 50%;
-  margin-left: 0.5%;
+  margin-left: 0.8%;
 }

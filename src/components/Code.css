@@ -1,16 +1,18 @@
 .Code {
   display: flex;
   justify-content: center;
+
 }
 
 .CodePegs {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
+  height: 29px;
+  width: 29px;
   margin: 0.0625%;
-  border: 1px solid black;
+  border: 2px solid lightgrey;
+  border-style: outset;
   border-radius: 50%;
   user-select: none;
   -webkit-user-select: none;

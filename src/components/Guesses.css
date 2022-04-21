@@ -5,24 +5,27 @@
 }
 
 .Guesses {
-  border: 1px solid black;
+  border: 2px solid silver;
+  border-style: outset;
   padding: 0.25%;
   margin: 0.125%;
   border-radius: 1rem;
+  background: burlywood;  
 }
 
 .Dot {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 32.5px;
-  margin: 0.5%;
+  height: 26px;
+  width: 30.5px;
+  margin: 2%;
   position: relative;
   left: 0.5%;
-  background: transparent;
-  border: 1px solid black;
+  background: white;
+  border: 2px solid lightgrey;
   border-radius: 50%;
+  border-style: outset;
   user-select: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

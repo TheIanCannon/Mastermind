@@ -1,8 +1,12 @@
 .Hints {
   display: flex;
   flex-direction: column;
-  margin-top: 0.5%;
-  margin-left: 0.25%;
+  border: 2px solid silver;
+  border-style: outset;
+  padding: 0.25%;
+  margin: 0.125%;
+  border-radius: 1rem;
+  background: burlywood;
 }
 
 .HintRow {
@@ -11,7 +15,8 @@
   display: grid;
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 50%;
-  padding-top: 10%;
+  padding-top: 17%;
+  padding-left: 10%;
   margin-left: 0.25%;
   margin-top: 1%;
   margin-bottom: 0.25%;
@@ -23,7 +28,9 @@
   height: 6px;
   width: 6px;
   margin: 0.0625%;
-  border: 1px solid black;
+  background: white;
+  border: 1px solid darkgrey;
+  border-style: outset;
   border-radius: 50%;
 }
 
