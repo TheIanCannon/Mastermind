@@ -1,5 +1,9 @@
 .App {
-  position: absolute center top fixed !important;
+  height: 100%;
+  width: 100%;
+  position: center fixed !important;
+  top: 0;
+  overflow-y: none;
 }
 
 .GuessesAndHints {
