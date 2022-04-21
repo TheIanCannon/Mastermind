@@ -5,10 +5,8 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
   function handleClick(evt){
     if(currentPeg<=3){
 						guessBoard[currentRow][currentPeg]=evt.target.innerHTML;
-						console.log('button is', evt.target.id, 'choice is', guessBoard[currentRow][currentPeg]);
 						setCurrentPeg(currentPeg+1)
     };
-    console.log(guessBoard[currentRow]);
     setGuessBoard(guessBoard);
  		}
 
@@ -19,7 +17,6 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
       return;
     } else {
 						checkGuesses();
-    console.log('solved?', solved);
     if (solved) {
         message="YOU WIN!!!";
         setMessage(message);

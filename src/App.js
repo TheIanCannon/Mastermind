@@ -52,9 +52,6 @@ export default function App(){
     getCode(); 
   },[]);
 
-  console.log('the code is ', codePegs);
-
-
   return(    
     <div className="App">
 						<div className="Mastermind">
