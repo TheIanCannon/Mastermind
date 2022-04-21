@@ -15,10 +15,26 @@
 }
 
 .Hint {
+  
+  justify-content: center;
   align-items: center;
   height: 6px;
   width: 6px;
   margin: 0.0625%;
   border: 1px solid black;
   border-radius: 50%;
+}
+
+#Hint_Y{
+  /* color: black; */
+  background: black;
+}
+
+#Hint_P{
+  color: grey;
+  background: grey;
+}
+#Hint_N{
+  color: white;
+  background: white;
 }

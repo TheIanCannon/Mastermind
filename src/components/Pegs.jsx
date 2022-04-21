@@ -28,26 +28,26 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 								console.log(currentRow);
 								console.log(guessBoard[currentRow]);
 						} else if (currentRow===9) {
+        checkGuesses();
 								alert("YOU LOSE");
 						}
 				}
   }
    
   function checkGuesses(){
-    let hintArray = [];
+    let checkArray = [];
     for (let i=0; i<codePegs.length; i++){
         if (guessBoard[currentRow][i]===codePegs[i]) {
-            hintArray.push("Y");
+            checkArray.push("Y");
         } else if (codePegs.includes(guessBoard[currentRow][i])){
-            hintArray.push("P");
+            checkArray.push("P");
         } else {
-            hintArray.push("N");
+            checkArray.push("N");
         }
     }
-    console.log(hintArray);
+    let hintArray = checkArray.sort( () => .5 - Math.random() );
     hintBoard[currentRow]=hintArray;
     setHintBoard(hintBoard);
-    console.log(hintBoard);
 }
 
   function handleClear(){
