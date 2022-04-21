@@ -2,16 +2,17 @@
 .Row2 {
   display: flex;
   justify-content: center;
-  margin-left: 0.8%;
+  margin-left: 1%;
+  
 }
 
 .A-Peg {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  width: 30px;
-  margin: 0.125%;
+  height: 31px;
+  width: 31px;
+  margin: 0.175%;
   margin-top: 0.25%;
   border-radius: 50%;
   border: 2px solid lightgrey;
@@ -24,9 +25,11 @@
 }
 
 .CheckOrX {
+  font-weight: bolder;
+  color: grey;
   height: 30px;
   width: 30px;
   margin-top: 0.25%;
   border-radius: 50%;
-  margin-left: 0.8%;
+  margin-left: 0.9%;
 }
