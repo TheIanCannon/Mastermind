@@ -1,3 +1,7 @@
+.App {
+  position: absolute center top fixed !important;
+}
+
 .GuessesAndHints {
   display: flex;
   justify-content: center;
@@ -39,4 +43,10 @@
 #color_7 {
   color: magenta;
   background: magenta;
+}
+
+@media screen and (max-width: 320px) {
+  .App {
+    scale: 90%;
+  }
 }
