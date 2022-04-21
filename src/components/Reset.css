@@ -1,5 +1,8 @@
 .Reset{
   display: flex;
   justify-content: center;
-  
+  position: relative;
+  margin-top: 1vh;
+  left: 48%;
+  right: 48%;
 }

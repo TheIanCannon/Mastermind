@@ -10,3 +10,7 @@
   font-weight: lighter;
   font-size: small;
 }
+
+.PlayerMessage {
+  font-weight: bold;
+}

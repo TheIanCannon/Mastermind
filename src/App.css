@@ -4,7 +4,11 @@
 .GuessesAndHints{
   display: flex;
   justify-content: center;
-  margin-right: 0.5%;
+  margin-left: 1.75%;
+}
+
+.PegsAndReset{
+  margin-left: 1.5%;
 }
 
 #color_0{

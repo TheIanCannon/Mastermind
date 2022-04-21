@@ -61,9 +61,11 @@ export default function App(){
 										<Guesses guessBoard={guessBoard}/>              
 										<Hints guessBoard={guessBoard} hintBoard={hintBoard} currentHint={currentHint} setCurrentHint={setCurrentHint}/>        
 								</div>
+        <div className="PegsAndReset">
 								  <Pegs guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs} hintBoard={hintBoard} setHintBoard={setHintBoard} message={message} setMessage={setMessage} solved={solved} setSolved={setSolved}/>						
-        </div>
           <Reset/>
+        </div>
+      </div>
     </div>
 	 );
 }
