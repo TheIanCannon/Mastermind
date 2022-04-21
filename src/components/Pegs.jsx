@@ -1,6 +1,6 @@
 import './Pegs.css';
 
-export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, hintBoard, setHintBoard}){
+export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, hintBoard, setHintBoard, message, setMessage}){
 
   function handleClick(evt){
     if(currentPeg<=3){
@@ -14,12 +14,17 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 
   function handleSubmit(){
     if (guessBoard[currentRow].includes(null)) {
+      message="Choose four colors first...";
+      setMessage(message);
       return;
     } else {
 						checkGuesses();
     if (hintBoard[currentRow]===["Y","Y","Y","Y"]) {
-        alert("YOU WIN!");
+        message="YOU WIN!!!";
+        setMessage(message);
       } else if (currentRow<9) {
+        message="Try another solution...";
+        setMessage(message);
 				  		setCurrentRow(currentRow+1); 
 						  setCurrentPeg(0);
 						} else {
@@ -57,14 +62,14 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
 								<button className="A-Peg" id="color_1" onClick={handleClick}>1</button>
 								<button className="A-Peg" id="color_2" onClick={handleClick}>2</button>
 								<button className="A-Peg" id="color_3" onClick={handleClick}>3</button>          
-        <button className="CheckOrX" onClick={handleSubmit}>✔</button>            
+        <button className="CheckOrX" onClick={handleSubmit}>✓</button>            
       </div>
       <div className="Row2">
         <button className="A-Peg" id="color_4" onClick={handleClick}>4</button>
         <button className="A-Peg" id="color_5" onClick={handleClick}>5</button>
         <button className="A-Peg" id="color_6" onClick={handleClick}>6</button>
         <button className="A-Peg" id="color_7" onClick={handleClick}>7</button>          
-        <button className="CheckOrX" onClick={handleClear}>✘</button>
+        <button className="CheckOrX" onClick={handleClear}>✗</button>
       </div>     
   </div>
   );
