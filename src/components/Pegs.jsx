@@ -1,6 +1,6 @@
 import './Pegs.css';
 
-export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, hintBoard, setHintBoard, message, setMessage}){
+export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentRow, guessBoard, setGuessBoard, codePegs, hintBoard, setHintBoard, message, setMessage, solved, setSolved}){
 
   function handleClick(evt){
     if(currentPeg<=3){
@@ -19,7 +19,8 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
       return;
     } else {
 						checkGuesses();
-    if (hintBoard[currentRow]===["Y","Y","Y","Y"]) {
+    console.log('solved?', solved);
+    if (solved) {
         message="YOU WIN!!!";
         setMessage(message);
       } else if (currentRow<9) {
@@ -27,7 +28,7 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
         setMessage(message);
 				  		setCurrentRow(currentRow+1); 
 						  setCurrentPeg(0);
-						} else {
+						} else if (currentRow===9) {
       		message="You lose. Better luck next time!";
         setMessage(message);
 				  }
@@ -48,7 +49,13 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
     let hintArray = checkArray.sort( () => .5 - Math.random() );
     hintBoard[currentRow]=hintArray;
     setHintBoard(hintBoard);
-}
+    if (guessBoard[currentRow][0]===codePegs[0] &&
+        guessBoard[currentRow][1]===codePegs[1] &&
+        guessBoard[currentRow][2]===codePegs[2] &&
+        guessBoard[currentRow][3]===codePegs[3]) {
+    solved=true;
+    setSolved(solved);}
+  }
 
   function handleClear(){
     guessBoard[currentRow]=[null,null,null,null];
