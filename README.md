@@ -1,10 +1,15 @@
 # MASTERMIND #
 Based on the original physical boardgame, this digital version challenges a player to solve a secret code of four colors within ten moves. 
 
+## Technologies Used ##
+_Languages:_ CSS, HTML, Javascript
+_Libraries:_ ReactJS
+_API:_ Random.org API for code generation
+
 ## Setup ##
-1. Clone repository code: ```git clone https://github.com/TheIanCannon/mastermind-react.git```
-2. Install node modules: ```npm install```
-3. Run the app: ```npm start``` and browse to Localhost:3000
+1. Clone the repository code with ```git clone https://github.com/TheIanCannon/mastermind-react.git```.
+2. Install node modules with ```npm install```.
+3. Run the app: ```npm start``` and browse to Localhost:3000.
 
 ## Get Started ##
 1. Click on any of the eight colored dots to select one and add it to the blank rows, starting with the lowest first.
