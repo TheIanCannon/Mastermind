@@ -5,6 +5,7 @@ import Code from './components/Code.jsx';
 import Guesses from './components/Guesses.jsx';
 import Hints from './components/Hints.jsx';
 import Pegs from './components/Pegs.jsx';
+import Reset from './components/Reset.jsx';
 
 import './App.css';
 
@@ -14,6 +15,7 @@ export default function App(){
 		let [currentRow, setCurrentRow] = useState(0);
 		let [currentPeg, setCurrentPeg] = useState(0);
   let [currentHint, setCurrentHint] = useState(0);
+  let [solved, setSolved] = useState(false);
 		let [guessBoard, setGuessBoard] = useState([
 				[null,null,null,null],
 				[null,null,null,null],
@@ -57,13 +59,14 @@ export default function App(){
     <div className="App">
 						<div className="Mastermind">
 								<TitleTag message={message}/>
-								<Code codePegs={codePegs}/>
+								<Code codePegs={codePegs} solved={solved} setSolved={setSolved}/>
 								<div className="GuessesAndHints">
 										<Guesses guessBoard={guessBoard}/>              
 										<Hints guessBoard={guessBoard} hintBoard={hintBoard} currentHint={currentHint} setCurrentHint={setCurrentHint}/>        
 								</div>
 								  <Pegs guessBoard={guessBoard} setGuessBoard={setGuessBoard} currentRow={currentRow} setCurrentRow={setCurrentRow} currentPeg={currentPeg} setCurrentPeg={setCurrentPeg} codePegs={codePegs} hintBoard={hintBoard} setHintBoard={setHintBoard}/>						
         </div>
+          <Reset/>
     </div>
 	 );
 }

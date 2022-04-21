@@ -10,13 +10,15 @@
   height: 30px;
   width: 30px;
   margin: 0.0625%;
-  background: grey;
-  color: transparent;
   border: 1px solid black;
   border-radius: 50%;
- user-select: none;
+  user-select: none;
    -webkit-user-select: none;
    -khtml-user-select: none;
    -moz-user-select: none;
    -ms-user-select: none; 
+}
+
+#Hidden{
+  color: grey;
 }

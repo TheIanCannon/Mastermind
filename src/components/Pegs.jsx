@@ -16,22 +16,16 @@ export default function Pegs({currentPeg, currentRow, setCurrentPeg, setCurrentR
     if (guessBoard[currentRow].includes(null)) {
       return;
     } else {
-						if (guessBoard[currentRow][0]===codePegs[0] && 
-          guessBoard[currentRow][1]===codePegs[1] && 
-          guessBoard[currentRow][2]===codePegs[2] && 
-          guessBoard[currentRow][3]===codePegs[3]) {      
+						checkGuesses();
+    if (hintBoard[currentRow]===["Y","Y","Y","Y"]) {
         alert("YOU WIN!");
-						} else if (currentRow<9) {
-						  checkGuesses();
-								setCurrentRow(currentRow+1); 
-								setCurrentPeg(0);
-								console.log(currentRow);
-								console.log(guessBoard[currentRow]);
-						} else if (currentRow===9) {
-        checkGuesses();
-								alert("YOU LOSE");
-						}
+      } else if (currentRow<9) {
+				  		setCurrentRow(currentRow+1); 
+						  setCurrentPeg(0);
+						} else {
+      		alert("YOU LOSE");
 				}
+     }
   }
    
   function checkGuesses(){

@@ -26,15 +26,15 @@
 }
 
 #Hint_Y{
-  /* color: black; */
+  color: black;
   background: black;
 }
 
 #Hint_P{
-  color: grey;
-  background: grey;
+  color: rgb(100, 100, 100);
+  background: rgb(100, 100, 100);
 }
 #Hint_N{
-  color: white;
-  background: white;
+  color: rgb(200, 200, 200);
+  background: rgb(200, 200, 200);
 }
