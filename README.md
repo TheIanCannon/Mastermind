@@ -10,7 +10,7 @@ _Libraries:_ ReactJS\
 _API:_ Random.org API for code generation
 
 ## Setup ##
-1. Clone the repository code with ```git clone https://github.com/TheIanCannon/mastermind-react.git```.
+1. Clone the repository with ```git clone https://github.com/TheIanCannon/mastermind-react.git``` and ```cd``` into the cloned repo.
 2. Install node modules with ```npm install```.
 3. Run the app with ```npm start``` and browse to Localhost:3000.
 
