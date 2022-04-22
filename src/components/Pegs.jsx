@@ -50,7 +50,7 @@ export default function Pegs({
     for (let i = 0; i < codePegs.length; i++) {
       if (guessBoard[currentRow][i] === codePegs[i]) {
         checkArray.push("Y");
-      } else if (codePegs.includes(guessBoard[currentRow][i])) {
+      } else if (guessBoard[currentRow][i].includes(codePegs)) {
         checkArray.push("P");
       } else {
         checkArray.push("N");
