@@ -1,6 +1,9 @@
 # MASTERMIND #
 Based on the original physical boardgame, this digital version challenges a player to solve a secret code of four colors within ten moves. 
 
+## Screenshots ##
+![Various states: starting, four colors needed, try again, lose, win](https://i.imgur.com/KZuxDOT.png)
+
 ## Technologies Used ##
 _Languages:_ CSS, HTML, Javascript\
 _Libraries:_ ReactJS\
@@ -20,3 +23,9 @@ _API:_ Random.org API for code generation
 7. Receive a ```Try another solution...` message if the solution is incorrect, and attempt decoding again.
 8. Receive a ```You Lose! Better luck next time.``` message if all ten attempts fail.
 7. Click ```Reset``` to restart the game at any time.
+
+## Next Steps ##
+• Expand difficulty by including more color choices for longer code sequences.
+• Increase number of players by including more gameboards or switching between gameboards each turn.
+• Add more decoration with CSS.
+• Update design in CSS to avoid components' minor shifting based on screen size.
