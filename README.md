@@ -21,7 +21,7 @@ _API:_ Random.org API for code generation
 4. Click ```✓``` to submit the attempted solution. A solution is accepted only if all four spaces have been filled. Upon submission, light grey (wrong color), dark grey (right color/wrong location), and black (right color/location) pips randomly fill each of the four hint spots next to the current row.
 6. Receive a ```YOU WIN!!!``` message if the solution is correct. 
 7. Receive a ```Try another solution...``` message if the solution is incorrect, and attempt decoding again.
-8. Receive a ```You Lose! Better luck next time.``` message if all ten attempts fail.
+8. Receive a ```You lose. Better luck next time!``` message if all ten attempts fail.
 7. Click ```Reset``` to restart the game at any time.
 
 ## Next Steps ##
