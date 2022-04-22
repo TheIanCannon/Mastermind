@@ -28,4 +28,4 @@ _API:_ Random.org API for code generation
 • Expand difficulty by including more color choices for longer code sequences.\
 • Increase number of players by including more gameboards or switching between gameboards each turn.\
 • Add more decoration with CSS.\
-• Update design in CSS to avoid components' minor shifting based on screen size.\
+• Update design in CSS to avoid components' minor shifting based on screen size.
