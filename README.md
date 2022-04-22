@@ -25,7 +25,7 @@ _API:_ Random.org API for code generation
 7. Click ```Reset``` to restart the game at any time.
 
 ## Next Steps ##
-• Expand difficulty by including more color choices for longer code sequences.
-• Increase number of players by including more gameboards or switching between gameboards each turn.
-• Add more decoration with CSS.
-• Update design in CSS to avoid components' minor shifting based on screen size.
+• Expand difficulty by including more color choices for longer code sequences.\
+• Increase number of players by including more gameboards or switching between gameboards each turn.\
+• Add more decoration with CSS.\
+• Update design in CSS to avoid components' minor shifting based on screen size.\
