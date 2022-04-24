@@ -39,7 +39,7 @@ export default function App() {
     [null, null, null, null],
     [null, null, null, null]
   ]);
-  let [message, setMessage] = useState("Guess the hidden code...");
+  let [message, setMessage] = useState("Choose colors to break the code...");
 
   useEffect(() => {
     const getCode = async () => {

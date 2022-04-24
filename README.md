@@ -25,6 +25,9 @@ _API:_ Random.org API for code generation
 7. Click ```Reset``` to restart the game at any time.
 
 ## Next Steps ##
+• Redo color-choosing pegs at bottom by creating array and mapping array into buttons with onClick = handleClick functions tied to array elements of colors/numbers.\
+• Update messaging with dynamic feedback related to game rules.\
+• Add accordion style expanding/collapsing section with quick basic rules info for new players.\
 • Expand difficulty by including more color choices for longer code sequences.\
 • Increase number of players by including more gameboards or switching between gameboards each turn.\
 • Add more decoration with CSS.\
