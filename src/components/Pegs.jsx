@@ -15,7 +15,7 @@ export default function Pegs({
   solved,
   setSolved,
   lost,
-  setLost
+  setLost,
 }) {
   function handleClick(evt) {
     if (currentPeg <= 3) {
@@ -27,7 +27,7 @@ export default function Pegs({
 
   function handleSubmit() {
     if (solved || lost) {
-      return
+      return;
 				};
     if (guessBoard[currentRow].includes(null)) {
       message = "Choose four colors first...";
@@ -79,7 +79,6 @@ export default function Pegs({
 
   function handleClear() {
     if (solved || lost) {
-      document.getElementsByClassName('CheckOrX').id='blackout';
       return;
     };
     guessBoard[currentRow] = [null, null, null, null];
@@ -102,7 +101,7 @@ export default function Pegs({
         <button className="A-Peg" id="color_3" onClick={handleClick}>
           3
         </button>
-        <button className="CheckOrX" onClick={handleSubmit}>
+        <button className="CheckOrX" id={(lost || solved) ? 'blackout' : null} onClick={handleSubmit}>
           ✓
         </button>
       </div>
@@ -119,7 +118,7 @@ export default function Pegs({
         <button className="A-Peg" id="color_7" onClick={handleClick}>
           7
         </button>
-        <button className="CheckOrX" id="" onClick={handleClear}>
+        <button className="CheckOrX" id={(lost || solved) ? 'blackout' : null} onClick={handleClear}>
           ✗
         </button>
       </div>
