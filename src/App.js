@@ -15,6 +15,7 @@ export default function App() {
   let [currentPeg, setCurrentPeg] = useState(0);
   let [currentHint, setCurrentHint] = useState(0);
   let [solved, setSolved] = useState(false);
+  let [lost, setLost] = useState(false);
   let [guessBoard, setGuessBoard] = useState([
     [null, null, null, null],
     [null, null, null, null],
@@ -57,7 +58,7 @@ export default function App() {
     <div className="App">
       <TitleTag message={message} />
       <div className="GameBoard">
-        <Code codePegs={codePegs} solved={solved} setSolved={setSolved} />
+        <Code codePegs={codePegs} solved={solved} lost={lost} />
         <div className="GuessesAndHints">
           <Guesses guessBoard={guessBoard} />
           <Hints
@@ -82,6 +83,8 @@ export default function App() {
             setMessage={setMessage}
             solved={solved}
             setSolved={setSolved}
+            lost={lost}
+            setLost={setLost}
           />
           <Reset />
         </div>

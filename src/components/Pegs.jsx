@@ -13,7 +13,9 @@ export default function Pegs({
   message,
   setMessage,
   solved,
-  setSolved
+  setSolved,
+  lost,
+  setLost
 }) {
   function handleClick(evt) {
     if (currentPeg <= 3) {
@@ -41,6 +43,9 @@ export default function Pegs({
       } else if (currentRow === 9) {
         message = "You lose. Better luck next time!";
         setMessage(message);
+        lost = true;
+        setLost(lost);
+        console.log(lost);
       }
     }
   }
@@ -71,6 +76,10 @@ export default function Pegs({
   }
 
   function handleClear() {
+    if (solved || lost) {
+      document.getElementsByClassName("CheckOrX").id="blackout";
+      return;
+    };
     guessBoard[currentRow] = [null, null, null, null];
     setGuessBoard(guessBoard);
     setCurrentPeg(0);
@@ -108,7 +117,7 @@ export default function Pegs({
         <button className="A-Peg" id="color_7" onClick={handleClick}>
           7
         </button>
-        <button className="CheckOrX" onClick={handleClear}>
+        <button className="CheckOrX" id={null} onClick={handleClear}>
           ✗
         </button>
       </div>

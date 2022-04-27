@@ -49,6 +49,11 @@
   background: magenta;
 }
 
+#blackout{
+  color: black;
+  background: black;
+}
+
 @media screen and (max-width: 320px) {
   .App {
     scale: 90%;
