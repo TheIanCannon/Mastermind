@@ -25,6 +25,9 @@ _API:_ Random.org API for code generation
 7. Click ```Reset``` to restart the game at any time.
 
 ## Next Steps ##
+• Fix end-of-game bug allowing player to retry final row after win/lose state change.
+• Correct guess-checking function to avoid redundant copies of colors already found in right place.
+• Improve hidden code from API to keep player from cheating by accessing info through Elements in browser console.
 • Redo color-choosing pegs at bottom by creating array and mapping array into buttons with onClick = handleClick functions tied to array elements of colors/numbers.\
 • Solve issue with API call function logging two calls instead of one.\
 • Update messaging with dynamic feedback related to game rules.\
