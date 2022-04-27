@@ -101,7 +101,7 @@ export default function Pegs({
         <button className="A-Peg" id="color_3" onClick={handleClick}>
           3
         </button>
-        <button className="CheckOrX" id={(lost || solved) ? 'blackout' : null} onClick={handleSubmit}>
+        <button className="CheckOrX" id={(lost || solved) ? 'Blackout' : null} onClick={handleSubmit}>
           ✓
         </button>
       </div>
@@ -118,7 +118,7 @@ export default function Pegs({
         <button className="A-Peg" id="color_7" onClick={handleClick}>
           7
         </button>
-        <button className="CheckOrX" id={(lost || solved) ? 'blackout' : null} onClick={handleClear}>
+        <button className="CheckOrX" id={(lost || solved) ? 'Blackout' : null} onClick={handleClear}>
           ✗
         </button>
       </div>
