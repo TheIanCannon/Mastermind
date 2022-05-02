@@ -1,12 +1,14 @@
-export default function Code({codePegs}) {
-  
-  return(
+export default function Hidden() {
+
+const hiddenPegs = ["?","?","?","?"];
+
+  return (
     <div className="Code">
-      {codePegs.map((peg, k) => {
+      {hiddenPegs.map((peg, k) => {
         return (
           <div
             className="CodePegs"
-            id={"color_" + peg}
+            id="Hidden"
             key={k}
           >
             {peg}
@@ -14,5 +16,7 @@ export default function Code({codePegs}) {
         );
       })}
     </div>
-		);  
+  );
 }
+
+

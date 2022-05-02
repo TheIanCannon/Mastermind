@@ -43,7 +43,11 @@
   color: rgb(100, 100, 100);
   background: rgb(100, 100, 100);
 }
+#Hint_D {
+  color: white;
+  background: white;
+}
 #Hint_N {
-  color: rgb(200, 200, 200);
-  background: rgb(200, 200, 200);
+  color: rgb(175, 175, 175);
+  background: rgb(175, 175, 175);
 }

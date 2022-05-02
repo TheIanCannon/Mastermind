@@ -6,6 +6,8 @@ import Guesses from "./components/Guesses.jsx";
 import Hints from "./components/Hints.jsx";
 import Pegs from "./components/Pegs.jsx";
 import Reset from "./components/Reset.jsx";
+import Cipher from "./components/Cipher.jsx";
+import Hidden from "./components/Hidden.jsx";
 
 import "./App.css";
 
@@ -58,7 +60,7 @@ export default function App() {
     <div className="App">
       <TitleTag message={message} />
       <div className="GameBoard">
-        <Code codePegs={codePegs} solved={solved} lost={lost} />
+        <Cipher codePegs={codePegs} solved={solved} lost={lost} Code={Code} Hidden={Hidden}/>
         <div className="GuessesAndHints">
           <Guesses guessBoard={guessBoard} />
           <Hints
